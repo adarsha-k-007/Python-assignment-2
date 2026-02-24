@@ -3,12 +3,12 @@ print()
 num = int(input("How many numbers you want to add? : "))
 print()
 
-total = 0
+total = 0                                 # keeping initial total as 0
 maximum = None
 minimum = None
 
 for i in range(1, num+1):
-    number = int(input(f"Enter the number {i} : "))
+    number = int(input(f"Enter the number {i} : "))           # input
 
     total = total + number
 
@@ -29,3 +29,4 @@ print("Sum of the Numbers : ", total)
 print("Average of the Numbers : ", total / num)
 print("Maximum Number : ", maximum)
 print("Minimum Number : ", minimum)
+
