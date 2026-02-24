@@ -1,15 +1,31 @@
-num = int(input("How many numbers you want to add? : ")) #input
+print("-----SUM AND AVERAGE CALCULATOR-----")
 print()
-numbers = []
-for i in range(1,num+1):
-    items = int(input(f"Enter the number {i} : "))
-    numbers.append(items)  #adding into the list
-    
+num = int(input("How many numbers you want to add? : "))
 print()
-print("You gave: ",numbers)
 
-total = sum(numbers)
-print("\nSum of the Numbers : ",total)
-print("Average of the Numbers : ",total/(len(numbers)))
-print("Maximum Number : ",max(numbers))
-print("Minimum Number : ",min(numbers))
+total = 0
+maximum = None
+minimum = None
+
+for i in range(1, num+1):
+    number = int(input(f"Enter the number {i} : "))
+
+    total = total + number
+
+    # For first number
+    if i == 1:
+        maximum = number
+        minimum = number
+    else:
+        if number > maximum:
+            maximum = number
+
+        if number < minimum:
+            minimum = number
+
+print()
+
+print("Sum of the Numbers : ", total)
+print("Average of the Numbers : ", total / num)
+print("Maximum Number : ", maximum)
+print("Minimum Number : ", minimum)
