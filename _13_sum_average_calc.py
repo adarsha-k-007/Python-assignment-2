@@ -30,3 +30,4 @@ print("Average of the Numbers : ", total / num)
 print("Maximum Number : ", maximum)
 print("Minimum Number : ", minimum)
 
+
